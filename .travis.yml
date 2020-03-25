@@ -1,6 +1,7 @@
 version: ~> 1.0
 language: python
-sudo: false
+os: linux
+dist: xenial
 
 # If you need X11:
 services:
