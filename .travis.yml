@@ -20,11 +20,6 @@ matrix:
     - name: flake8 linting
       python: 3.6
       env: LINT_PYTHON=testproject1234
-    - name: PyPI upload
-      python: 3.6
-      env:
-        - UPLOAD_PYPI=testproject1234
-        - SETUP_ARGS="bdist --format=zip"
     - python: 3.7
 
 install:
@@ -38,3 +33,6 @@ before_script:
 
 script:
   - sleep 1
+
+import:
+  - hhslepicka/pcds-ci-helpers:travis/pypi-upload.yml
