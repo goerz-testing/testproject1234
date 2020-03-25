@@ -22,8 +22,7 @@ matrix:
       env: LINT_PYTHON=testproject1234
     - name: PyPI upload
       python: 3.6
-      env:
-        - UPLOAD_PYPI=testproject1234
+      env: UPLOAD_PYPI=testproject1234
     - python: 3.7
 
 install:
