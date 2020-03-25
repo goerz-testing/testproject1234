@@ -36,4 +36,4 @@ script:
   - sleep 1
 
 import:
-  - hhslepicka/pcds-ci-helpers:travis/pypi-upload.yml
+  - hhslepicka/pcds-ci-helpers:travis/pypi-upload.yml@pypi
