@@ -25,7 +25,7 @@ matrix:
     - python: 3.7
 
 install:
-  - git clone --depth 1 git://github.com/hhslepicka/pcds-ci-helpers.git --branch pypi
+  - git clone --depth 1 git://github.com/pcdshub/pcds-ci-helpers.git
   - source pcds-ci-helpers/travis/init.sh
 
 before_script:
