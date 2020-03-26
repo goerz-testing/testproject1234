@@ -16,6 +16,8 @@ addons:
 env:
   global:
     - secure: "<docs build key>"
+    - DOCS_FOLDER: docs
+    - DOCS_REQUIREMENTS: docs-requirements.txt
 
 matrix:
   include:
@@ -40,6 +42,3 @@ script:
 import:
   - hhslepicka/pcds-ci-helpers:travis/pypi-upload.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/doctr-upload.yml@pypi
-    env:
-      - DOCS_FOLDER=docs
-      - DOCS_REQUIREMENTS=docs-requirements.txt
