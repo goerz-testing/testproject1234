@@ -23,6 +23,7 @@ matrix:
       python: 3.6
       env: LINT_PYTHON=testproject1234
     - python: 3.7
+    - python: 3.8
 
 install:
   - git clone --depth 1 git://github.com/pcdshub/pcds-ci-helpers.git
@@ -39,3 +40,6 @@ script:
 import:
   - hhslepicka/pcds-ci-helpers:travis/pypi-upload.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/doctr-upload.yml@pypi
+    env:
+      - DOCS_FOLDER=docs
+      - DOCS_REQUIREMENTS=docs-requirements.txt
