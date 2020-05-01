@@ -20,18 +20,6 @@ env:
     - DOCS_FOLDER: docs
     - DOCS_REQUIREMENTS: docs-requirements.txt
 
-matrix:
-  include:
-    - name: flake8 linting
-      python: 3.6
-      env: LINT_PYTHON=testproject1234
-    - python: 3.7
-    - python: 3.8
-
-install:
-  - git clone --depth 1 git://github.com/pcdshub/pcds-ci-helpers.git
-  - source pcds-ci-helpers/travis/init.sh
-
 before_script:
   # Run the window manager
   - "herbstluftwm &"
@@ -41,5 +29,6 @@ script:
   - sleep 1
 
 import:
+  - hhslepicka/pcds-ci-helpers:travis/python_linter.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/pypi-upload.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/doctr-upload.yml@pypi
