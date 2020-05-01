@@ -9,7 +9,6 @@ import datetime
 import os
 import sys
 
-import testproject1234
 import sphinx_rtd_theme
 
 
@@ -22,6 +21,7 @@ import sphinx_rtd_theme
 module_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'../../')
 sys.path.insert(0, module_path)
 
+import testproject1234
 
 # -- Project information -----------------------------------------------------
 
