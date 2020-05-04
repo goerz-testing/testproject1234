@@ -29,7 +29,7 @@ stages:
   - lint
   - test
   - name: deploy
-    if: branch = master AND type = push
+    if: (branch = master OR tag IS present) AND type != pull_request
 
 import:
   - hhslepicka/pcds-ci-helpers:travis/python_linter.yml@pypi
