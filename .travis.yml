@@ -26,9 +26,6 @@ before_script:
   - "herbstluftwm &"
   - sleep 1
 
-script:
-  - sleep 1
-
 stages:
   - lint
   - test
