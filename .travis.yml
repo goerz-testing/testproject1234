@@ -33,7 +33,7 @@ stages:
   - lint
   - test
   - name: deploy
-    if: branch = master
+    if: branch = master AND type = push
 
 import:
   - hhslepicka/pcds-ci-helpers:travis/python_linter.yml@pypi
