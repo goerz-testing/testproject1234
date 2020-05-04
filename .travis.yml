@@ -29,6 +29,12 @@ before_script:
 script:
   - sleep 1
 
+stages:
+  - lint
+  - test
+  - name: deploy
+    if: branch = master
+
 import:
   - hhslepicka/pcds-ci-helpers:travis/python_linter.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/python_tester.yml@pypi
