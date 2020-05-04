@@ -1,4 +1,4 @@
-import testproject1234
+import testproject1234.testmod
 
 
 def test_import():
