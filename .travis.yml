@@ -32,7 +32,7 @@ stages:
     if: (branch = master OR tag IS present) AND type != pull_request
 
 import:
-  - hhslepicka/pcds-ci-helpers:travis/python_linter.yml@pypi
-  - hhslepicka/pcds-ci-helpers:travis/python_tester.yml@pypi
-  - hhslepicka/pcds-ci-helpers:travis/pypi-upload.yml@pypi
-  - hhslepicka/pcds-ci-helpers:travis/doctr-upload.yml@pypi
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python_linter.yml@pypi
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python_tester.yml@pypi
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@pypi
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@pypi
