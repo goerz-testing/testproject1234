@@ -1,6 +1,0 @@
-testproject1234.testmod.module\_level\_function
-===============================================
-
-.. currentmodule:: testproject1234.testmod
-
-.. autofunction:: module_level_function

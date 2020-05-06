@@ -1,6 +1,0 @@
-testproject1234.testmod.example\_generator
-==========================================
-
-.. currentmodule:: testproject1234.testmod
-
-.. autofunction:: example_generator

@@ -1,6 +1,0 @@
-testproject1234.testmod.ExampleClass.example\_method
-====================================================
-
-.. currentmodule:: testproject1234.testmod
-
-.. automethod:: ExampleClass.example_method
