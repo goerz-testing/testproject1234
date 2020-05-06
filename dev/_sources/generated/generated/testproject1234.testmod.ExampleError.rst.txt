@@ -1,6 +1,0 @@
-testproject1234.testmod.ExampleError
-====================================
-
-.. currentmodule:: testproject1234.testmod
-
-.. autoexception:: ExampleError

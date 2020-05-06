@@ -1,6 +1,0 @@
-testproject1234.testmod.ExampleClass.\_\_init\_\_
-=================================================
-
-.. currentmodule:: testproject1234.testmod
-
-.. automethod:: ExampleClass.__init__
