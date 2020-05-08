@@ -37,3 +37,4 @@ import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python_tester.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@pypi
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@pypi
