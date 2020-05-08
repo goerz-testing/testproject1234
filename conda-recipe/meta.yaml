@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -28,10 +29,10 @@ about:
   home: "https://github.com/hhslepicka/testproject1234"
   license: BSD
   license_family: BSD
-  license_file: 
+  license_file:
   summary: "Test Project"
-  doc_url: 
-  dev_url: 
+  doc_url:
+  dev_url:
 
 extra:
   recipe-maintainers:
