@@ -1,1 +1,1 @@
-{"folders": ["master", "v0.7.2"], "labels": {"master": "master", "v0.7.2": "v0.7.2 (latest)"}, "versions": ["master", "v0.7.2"], "warnings": {"master": ["unreleased"], "v0.7.2": []}, "latest": "v0.7.2", "downloads": {"master": [], "v0.7.2": []}}
+{"folders": ["master", "v0.7.2", "v0.8"], "labels": {"master": "master", "v0.7.2": "v0.7.2", "v0.8": "v0.8 (latest)"}, "versions": ["master", "v0.8", "v0.7.2"], "warnings": {"master": ["unreleased"], "v0.7.2": ["outdated"], "v0.8": []}, "latest": "v0.8", "downloads": {"master": [], "v0.7.2": [], "v0.8": []}}
