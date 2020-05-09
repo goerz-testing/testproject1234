@@ -27,7 +27,6 @@ before_script:
   - sleep 1
 
 stages:
-  - lint
   - test
   - name: deploy
     if: (branch = master OR tag IS present) AND type != pull_request
