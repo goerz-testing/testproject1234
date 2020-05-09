@@ -1,21 +1,18 @@
-{% set name = "testproject1234" %}
-{% set version = "0.7.2" %}
+{% set data = load_setup_py_data() %}
 
 package:
   name: "{{ name|lower }}"
-  version: "{{ version }}"
+  version : {{ data.get('version') }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: dcb4bc27d8718d38956281f5e9605b432f8cce5881d81cb3d4409befe2848d65
+  path: ..
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  host:
+  build:
     - pip
     - python
   run:
@@ -28,12 +25,9 @@ test:
 about:
   home: "https://github.com/hhslepicka/testproject1234"
   license: BSD
-  license_family: BSD
-  license_file:
   summary: "Test Project"
-  doc_url:
-  dev_url:
 
 extra:
   recipe-maintainers:
-    - your-github-id-here
+    - ZryletTC
+    - hhslepicka
