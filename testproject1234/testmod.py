@@ -46,7 +46,7 @@ module_level_variable1 = 12345
 
 module_level_variable2 = 98765
 
-extravar = 1337
+extravar = 13371337
 
 """int: Module level variable documented inline.
 
