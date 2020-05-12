@@ -21,7 +21,7 @@ env:
     - DOCS_REQUIREMENTS: docs-requirements.txt
     - DOCTR_VERSIONS_MENU: 1
     - NO_JEKYLL: 1
-    - LINT_PYTHON: testproject1234 --verbose
+    - PYTHON_LINT_OPTIONS: "testproject1234 --verbose"
 
 before_script:
   # Run the window manager
