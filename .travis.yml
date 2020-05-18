@@ -33,6 +33,7 @@ stages:
 import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester.yml@pypi
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/docs-build.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@pypi
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@pypi
