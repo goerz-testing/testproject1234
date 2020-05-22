@@ -31,9 +31,9 @@ stages:
     if: (branch = master OR tag IS present) AND type != pull_request
 
 import:
-  - pcdshub/pcds-ci-helpers:travis/shared_configs/python-linter.yml
-  - pcdshub/pcds-ci-helpers:travis/shared_configs/python-tester.yml
-  - pcdshub/pcds-ci-helpers:travis/shared_configs/docs-build.yml
-  - pcdshub/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml
-  - pcdshub/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml
-  - pcdshub/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/docs-build.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
