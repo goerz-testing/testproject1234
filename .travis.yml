@@ -13,10 +13,8 @@ env:
     - CONDA_PACKAGE="testproject1234"
     - CONDA_RECIPE_FOLDER="conda-recipe"
 
-matrix:
-  include:
-    - python: 3.6
-      env: BENCHMARK=1
+python: 3.6
+  env: BENCHMARK=1
 
 stages:
   - test
