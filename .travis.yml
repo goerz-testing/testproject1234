@@ -3,15 +3,6 @@ language: python
 os: linux
 dist: xenial
 
-# If you need X11:
-services:
-    - xvfb
-
-addons:
-    apt:
-      packages:
-        - herbstluftwm
-        - libxkbcommon-x11-0
 
 env:
   global:
@@ -19,11 +10,13 @@ env:
     - secure: "l5zhSjeM8BsmqS0bpwBKkBPOrOXRlQIwntm/Bf6bD0bzO1KxsB08sYEHjFTE5zwQAHb4fHJLDwAb5jHRG/d5rNCfko5836bNKwkVOduK75l/jP3q9XsSouDZNQkwHH3CNfJ4A8OLLfSMeGrFGTk/R4FPUURulwUA7Xq5q2euoBT2ChTi/8t52UZ0cuERND+Tqri58fiA1+3beb8lyfqDCScfksPCSAC0HwaDEeuO6F5G+F/9em+wBnr8+o7g3pvyuP5r2USzFCv+Jbopw+iHk/kxDXV3Onc9eHj6c5eCxVM8rYNOcED9SDIC6jCAdVzc22oy0A+H+XkNRrYPgFMkECPX23og7UBVx1PCVA3OyO5121YcJ/xAyXfyCU7RgE5dH+bMxvoNedgNmVYge33JFjY7MhOaQqFVFJEN6lK9/8lIC1CfHzO7v/APCrKKYhQPd2s8lDqmlfqvNN3U7JyJ6+BMdTK4b0OxPcZC7PCFB+IWTq2Zonr5jAw4MIJKP74Vhchis70kvz9npOYaPsQcX+uMegpPPYprO6Up0oIoXu1My3HOgsGkKGT93qX6HH9NFS/nae4+GJN0frq+LNxOMb2iSns56hd+1ct6XciAACEBbbUseviBri8ym2vwV8VInwkAhYDOrh119HflTLpBuyY7Nf5PPVUetCrdowo4QgE="
     - DOCTR_VERSIONS_MENU: 1
     - PYTHON_LINT_OPTIONS="testproject1234 --verbose"
+    - CONDA_PACKAGE="testproject1234"
+    - CONDA_RECIPE_FOLDER="conda-recipe"
 
-before_script:
-  # Run the window manager
-  - "herbstluftwm &"
-  - sleep 2
+matrix:
+  include:
+    - python: 3.6
+      env: BENCHMARK=1
 
 stages:
   - test
@@ -37,3 +30,4 @@ import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui@adjustments
