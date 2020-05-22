@@ -13,6 +13,12 @@ env:
     - CONDA_PACKAGE="testproject1234"
     - CONDA_RECIPE_FOLDER="conda-recipe"
 
+stages:
+  - test
+  - name: deploy
+    if: (branch = master OR tag IS present) AND type != pull_request
+
+
 jobs:
   include:
     - stage: test
@@ -20,10 +26,6 @@ jobs:
       python: 3.6
         env: BENCHMARK=1
 
-stages:
-  - test
-  - name: deploy
-    if: (branch = master OR tag IS present) AND type != pull_request
 
 import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
