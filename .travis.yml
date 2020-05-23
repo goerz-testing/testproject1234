@@ -25,4 +25,4 @@ import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@adjustments
