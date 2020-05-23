@@ -18,6 +18,12 @@ stages:
   - name: deploy
     if: (branch = master OR tag IS present) AND type != pull_request
 
+jobs:
+  include:
+    - name: "Benchmark"
+      python: 3.6
+      env: BENCHMARK=1
+
 import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester.yml@adjustments
