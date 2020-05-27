@@ -20,7 +20,8 @@ stages:
 
 jobs:
   include:
-    - name: "Benchmark"
+    - stage: test
+      name: "Benchmark"
       python: 3.6
       env: BENCHMARK=1
 
