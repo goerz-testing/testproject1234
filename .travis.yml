@@ -20,10 +20,11 @@ stages:
 
 jobs:
   include:
-    - stage: test
+    - <<: *testpython
       name: "Benchmark"
       python: 3.6
-      env: BENCHMARK=1
+      env:
+        - BENCHMARK: 1
 
 import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
