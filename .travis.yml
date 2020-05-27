@@ -13,11 +13,6 @@ env:
     - CONDA_PACKAGE="testproject1234"
     - CONDA_RECIPE_FOLDER="conda-recipe"
 
-stages:
-  - test
-  - name: deploy
-    if: (branch = master OR tag IS present) AND type != pull_request
-
 import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester.yml@adjustments
@@ -26,6 +21,11 @@ import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@adjustments
+
+stages:
+  - test
+  - name: deploy
+    if: (branch = master OR tag IS present) AND type != pull_request
 
 jobs:
   include:
