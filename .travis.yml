@@ -20,7 +20,6 @@ stages:
 import:
 #  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@adjustments
 #  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester.yml@adjustments
   - ./python-test-extension.yml
 #  - hhslepicka/pcds-ci-helpers:travis/shared_configs/docs-build.yml@adjustments
 #  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
