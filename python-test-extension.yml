@@ -1,7 +1,6 @@
 jobs:
   include:
-    - stage: test
-      name: "Benchmark"
-      python: 3.6
-      env:
-        - BENCHMARK: 1
+    - <<: *lcls_test_python
+          name: "Python 3.6 Benchmark"
+          env:
+            - BENCHMARK: 1
