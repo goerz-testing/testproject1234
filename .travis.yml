@@ -3,15 +3,6 @@ language: python
 os: linux
 dist: xenial
 
-import:
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/docs-build.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
-
 env:
   global:
     # Doctr deploy key for hhslepicka/testproject1234
@@ -26,10 +17,13 @@ stages:
   - name: deploy
     if: (branch = master OR tag IS present) AND type != pull_request
 
-jobs:
-  include:
-    - <<: *lcls_test_python
-      name: "Benchmark"
-      python: 3.6
-      env:
-        - BENCHMARK: 1
+import:
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester.yml@adjustments
+  - ./python-test-extension.yml
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/docs-build.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
+

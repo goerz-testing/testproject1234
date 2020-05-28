@@ -1,0 +1,7 @@
+jobs:
+  include:
+    - name: "Benchmark"
+      python: 3.6
+      env:
+        - BENCHMARK: 1
+        - SKIP_CONDA: 1
