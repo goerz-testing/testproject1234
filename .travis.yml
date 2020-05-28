@@ -26,11 +26,11 @@ stages:
   - test
   - name: deploy
     if: (branch = master OR tag IS present) AND type != pull_request
-
-jobs:
-  include:
-    - <<: *testpython
-      name: "Benchmark"
-      python: 3.6
-      env:
-        - BENCHMARK: 1
+#
+#jobs:
+#  include:
+#    - <<: *testpython
+#      name: "Benchmark"
+#      python: 3.6
+#      env:
+#        - BENCHMARK: 1
