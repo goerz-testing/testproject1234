@@ -6,6 +6,8 @@
 Welcome to testproject1234's documentation!
 ===========================================
 
+It Works!
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
