@@ -25,9 +25,7 @@ import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/docs-build.yml@adjustments
-
-#  - ./python-test-extension.yml
-#  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
-#  - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
-#  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
 
