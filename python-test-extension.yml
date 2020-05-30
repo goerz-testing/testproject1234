@@ -1,9 +1,9 @@
-import:
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
-
 jobs:
   include:
     stage: test
     name: "Python 3.6 Benchmark"
     env:
       - BENCHMARK: 1
+
+import:
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
