@@ -1,9 +1,10 @@
 jobs:
   include:
-    - stage: test
+    - <<: *testpythonconda
       name: "Python 3.6 Benchmark"
       env:
         - BENCHMARK: 1
+        - PYTHON_VERSION: 3.8
 
 import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
