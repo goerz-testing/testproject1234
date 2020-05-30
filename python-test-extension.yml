@@ -7,4 +7,5 @@ jobs:
         - PYTHON_VERSION: 3.8
 
 import:
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
+  - source: hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
+    mode: deep_merge_prepend
