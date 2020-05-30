@@ -3,7 +3,7 @@ import:
 
 jobs:
   include:
-    - <<: *lcls_test_python
-          name: "Python 3.6 Benchmark"
-          env:
-            - BENCHMARK: 1
+    stage: test
+    name: "Python 3.6 Benchmark"
+    env:
+      - BENCHMARK: 1
