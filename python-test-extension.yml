@@ -1,3 +1,6 @@
+import:
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
+
 jobs:
   include:
     - <<: *lcls_test_python
