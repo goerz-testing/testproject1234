@@ -1,9 +1,5 @@
 version: ~> 1.0
 
-language: python
-os: linux
-dist: xenial
-
 env:
   global:
     # Doctr deploy key for hhslepicka/testproject1234
@@ -13,23 +9,10 @@ env:
     - CONDA_PACKAGE="testproject1234"
     - CONDA_RECIPE_FOLDER="conda-recipe"
 
-stages:
-  - build
-  - test
-  - name: deploy
-    if: (branch = master OR tag IS present) AND type != pull_request
-
 jobs:
   allow_failures:
     - name: "Python 3.6 - PIP"
 
 import:
   - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-build.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-pip.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-tester-conda.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/python-linter.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/docs-build.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/pypi-upload.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/doctr-upload.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/anaconda-upload.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/standard-python-conda.yml@adjustments
