@@ -14,5 +14,5 @@ jobs:
     - name: "Python 3.6 - PIP"
 
 import:
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@adjustments
-  - hhslepicka/pcds-ci-helpers:travis/shared_configs/standard-python-conda.yml@adjustments
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/setup-env-ui.yml@package_linter
+  - hhslepicka/pcds-ci-helpers:travis/shared_configs/standard-python-conda.yml@package_linter
