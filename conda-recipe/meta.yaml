@@ -19,6 +19,9 @@ requirements:
     - python
 
 test:
+  requires:
+    - codecov
+    - pytest
   imports:
     - testproject1234
 
