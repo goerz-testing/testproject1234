@@ -7,6 +7,7 @@ Welcome to testproject1234's documentation!
 ===========================================
 
 It Works!
+Testing doctr-versions-menu 0.2.0...
 
 .. toctree::
    :maxdepth: 2
